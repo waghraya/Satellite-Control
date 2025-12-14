@@ -9,12 +9,12 @@ figure;
 
 subplot(3,1,1);
 plot(t, Roll);
-ylabel('Roll [deg]');
+ylabel('Roll [deg]', 'FontSize',14);
 
 subplot(3,1,2);
 plot(t,Pitch);
-ylabel('Pitch [deg]');
+ylabel('Pitch [deg]', 'FontSize',14);
 
 subplot(3,1,3);
 plot(t,Yaw);
-xlabel('Time [s]'); ylabel('Yaw [deg]');
+xlabel('Time [s]', 'FontSize',14); ylabel('Yaw [deg]', 'FontSize',14);
