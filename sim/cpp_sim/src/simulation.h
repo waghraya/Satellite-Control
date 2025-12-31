@@ -14,7 +14,7 @@ public:
     AttitudeState reference;
     AttitudeState initial;
     P_2 controller;
-    void Simulation::setInitialStates(AttitudeState reference_, AttitudeState initial_, double dt_, double totalTime_);
-    void Simulation::logStates(AttitudeState state, Vector3d torque_, int idx);
-    void Simulation::loop();
+    void setInitialStates(AttitudeState reference_, AttitudeState initial_, double dt_, double totalTime_);
+    void logStates(AttitudeState state, Vector3d torque_, int idx);
+    void loop();
 };

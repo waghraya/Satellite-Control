@@ -9,7 +9,9 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "C:\\Users\\waghr\\Documents\\Satellite 3-Axis Gimbal\\Satellite-Control\\sim\\cpp_sim\\ext\\eigen_lib"
             ],
             "options": {
                 "cwd": "${fileDirname}"
