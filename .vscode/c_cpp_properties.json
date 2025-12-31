@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${default}",
-                "C:/Users/waghr/Documents/CPP_Libs/eigen-5.0.0/eigen-5.0.0"
+                "${workspaceFolder}/sim/cpp_sim/src/**",
+                "C:/Users/waghr/Documents/Satellite 3-Axis Gimbal/Satellite-Control/sim/cpp_sim/ext/eigen_lib1"
             ],
             "defines": [
                 "_DEBUG",
