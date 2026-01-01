@@ -1,5 +1,5 @@
 #pragma once
-#include <Eigen/Dense>
+#include <Eigen/Geometry>
 using namespace Eigen;
 
 struct AttitudeState {

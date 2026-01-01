@@ -11,9 +11,10 @@ AttitudeState Dynamics::propagate(Quaterniond q_start, Vector3d omega_start, Vec
     angAcc = sat.I.llt().solve(torque - omega_start.cross(sat.I * omega_start));
     nextState.omega = omega_start + angAcc * dt;
     //Get quaternion dynamics
-    q_dot = 0.5 * (q_start.w() * nextState.omega + q_start.vec().cross(nextState.omega));
+    q_dot.w() = -0.5 * q_start.vec().dot(nextState.omega);
+    q_dot.vec() = 0.5 * (q_start.w() * nextState.omega + q_start.vec().cross(nextState.omega));
     nextState.q = q_start;
-    nextState.q.coeffs() += q_dot.coeffs() * dt;
+    nextState.q.coeffs() += (q_dot.coeffs() * dt).eval();
     nextState.q.normalize();
     return nextState;
 }
