@@ -1,5 +1,5 @@
 #pragma once
-#include <Eigen/Dense>
+#include <Eigen/Geometry>
 using namespace Eigen;
 
 Quaterniond euler_to_quaternion(double roll, double pitch, double yaw);

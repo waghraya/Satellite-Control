@@ -1,6 +1,8 @@
 #include "P_2.h"
 #include "simulation.h"
 #include "dynamics.h"
+#include <iostream>
+using namespace std;
 using namespace Eigen;
 
 void Simulation::setInitialStates(AttitudeState reference_, AttitudeState initial_, double dt_, double totalTime_) {
@@ -20,8 +22,10 @@ void Simulation::loop() {
     Vector3d angAcc = Vector3d::Zero();
     while (this->time < this->totalTime) {
         this->current = dyn.propagate(this->initial.q, this->initial.omega, torque, angAcc, this->dt);
-        logStates(this->current, torque, idx);
+        logStates(this->current, torque, this->idx);
+        cout << ". . . Simulation time: " << this->time << " seconds\n";
+        cout << "index = " << this->idx << "\n";
         this->time += this->dt;
-        idx += 1;
+        this->idx += 1;
     }
 }

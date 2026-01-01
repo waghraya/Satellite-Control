@@ -1,7 +1,7 @@
+#define _USE_MATH_DEFINES
+#include <cmath>
 #include "utils.h"
 using namespace Eigen;
-#define _USE_MATH_DEFINES
-#include <math.h>
 /*
 Roll pitch and yaw inputted in DEGREES returns normalized quaternion.
 Convention: ZYX (yaw-pitch-roll) intrinsic rotations
